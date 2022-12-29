@@ -1,0 +1,100 @@
+.entry-container{
+    font-size:16px;
+    width:75%;
+    height:80vh;
+    margin: 15vh auto;
+    font-family: "MingLiU","Alegreya SC";
+    color:#effeee;
+    letter-spacing:2px;
+}
+.directory{
+  border: 2px solid #effeee;
+  width:20%;
+  height:9vh;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.directory p{
+    border: 2px solid #effeee;
+    height:94%;
+    width:97%;
+    margin:0.8% auto;
+   font-size: 2.5rem;
+}
+.btn-directory{
+    width: 80%;
+    margin-top:6vh;
+    margin-left: auto;
+    margin-right: auto;
+    height:50vh;
+    display: flex;
+    justify-content: space-between;
+}
+.entry-type{
+    height:100%;
+    width:28%;
+    background-color: rgb(0, 0, 0);
+    border:2px solid #effeee;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 0.2s linear;
+}
+.entry-taiwan{
+    width:100%;
+    height: 85%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.entry-taiwan img{
+    width:87%;
+    height: 83%;
+    margin-top: 5%;
+}
+.entry-japan{
+    width:100%;
+    height: 85%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.entry-japan img{
+   margin-top: 5%;
+   width:87%;
+   height: 85%;
+}
+.entry-usa{
+    width:100%;
+    height: 85%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry-usa img{
+    margin-top: 10%;
+    width:87%;
+   
+}
+.taiwan-entry-text{
+    height: 10%;
+   font-size: 1.5rem;
+
+}
+.taiwan-entry-text span{
+    font-family: "Alegreya SC";
+
+}
+.entry-type:hover{
+    transform: translate(5px, -5px);
+    box-shadow: -15px 15px 12px 0 rgb(30, 11, 12);
+    border: 1px dashed rgb(201, 31, 36);
+}

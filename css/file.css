@@ -1,0 +1,654 @@
+html {
+
+  box-sizing: border-box;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+@media (max-width:1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:992px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:576px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width:360px) {
+  html {
+    font-size: 6px;
+  }
+}
+.container{
+  margin-top: 0;
+}
+/*標題開始*/
+.top-bar {
+  height: 90px;
+  width: 100%;
+  background-color: #000000;
+  color: #effeee;
+  font-size: 2.5rem;
+  text-align: left;
+  font-family: "MingLiU";
+  letter-spacing: 7px;
+  word-break: break-all;
+  border-bottom: 1px dotted #effeee;
+  padding-top: 15px;
+}
+.subtitle {
+  font-size: 1.5rem;
+  margin-left: 15px;
+}
+@media (max-width:576px) {
+  .top-bar{
+    font-size: 3.5rem;
+  }
+  .subtitle{
+    font-size: 2rem;
+  }
+}
+
+
+/*標題結束*/
+
+/*左側地圖區地名*/
+ .archives-taiwan{
+    width:50%;
+    height: 50%;
+    text-align: center;
+    margin: 7% auto;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    border: 5px double #efffee;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MingLiU";
+ }
+.margin-top{
+  margin-top: 3%;
+}
+ .archives-taiwan span{
+  font-family: "Alegreya SC";
+ }
+ 
+/*左側地圖區*/
+  /*地圖編輯區*/
+  svg {
+    height: 68vh;
+    width:100%;
+  }
+  @media (max-width:576px) {
+    svg{
+      height: 40vh;
+    }
+  }
+  g,#Penghu-County{
+    stroke: #0ba50036;
+    fill:#efffee
+  }
+  g#taiwan-north:hover, 
+  g#taiwan-south:hover,
+  g#taiwan-mid:hover,
+  g#taiwan-east:hover, 
+  g#japan-north:hover,
+  g#japan-south:hover,
+  g#japan-mid:hover,
+  g#japan-east:hover,
+  g#usa-north:hover,
+  g#usa-south:hover,
+  g#usa-mid:hover,
+  g#usa-east:hover{
+    fill:#83080aa6;
+    transform: translate(-5px,-5px);
+    cursor: pointer;
+  }
+  #placemark-taiwan-north,
+  #placemark-taiwan-south,
+  #placemark-taiwan-east,
+  #placemark-taiwan-mid,
+  #placemark-japan-north,
+  #placemark-japan-south,
+  #placemark-japan-east,
+  #placemark-japan-mid,
+  #placemark-usa-north,
+  #placemark-usa-south,
+  #placemark-usa-east,
+  #placemark-usa-mid{
+  
+    fill:#891b1b;
+    transition: all 0.5 linear;
+  }
+  #placemark-taiwan-north:hover,
+  #placemark-taiwan-south:hover,
+  #placemark-taiwan-east:hover,
+  #placemark-taiwan-mid:hover,
+  #placemark-japan-north:hover,
+  #placemark-japan-south:hover,
+  #placemark-japan-east:hover,
+  #placemark-japan-mid:hover,
+  #placemark-usa-north:hover,
+  #placemark-usa-south:hover,
+  #placemark-usa-east:hover,
+  #placemark-usa-mid:hover{
+  
+    fill:#bf0707;
+    stroke: #bf0707;
+    stroke-width: 5px;
+    transition: all 0.5 linear;
+  }
+  #placemark-usa-north:hover,
+  #placemark-usa-south:hover,
+  #placemark-usa-east:hover,
+  #placemark-usa-mid:hover{
+    stroke-width: 3px;
+  }
+  .upmove{
+    transform: translate(-5px,-5px);
+  }
+ 
+
+/*gallery(右側)開始*/
+.gallery {
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap:0 5%;
+  list-style: none;
+
+  }
+  @media (max-width:576px) {
+    .gallery{
+      margin-bottom: 20vh;
+    }
+  }
+  .gallery-title{
+    font-family: "Noto Sans TC";
+    color:#efffee;
+    overflow: hidden;
+    font-size: 2rem;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+  }
+  #t{
+    font-size: 1.6rem;
+  }
+  
+  #t-n,#t-s,#t-m,#t-e{
+    font-size: 1.4rem;
+    display: none;
+  }
+  .smallspan{
+    font-size:1.5rem;
+  }
+  @media (max-width:992px) {
+    .archives-taiwan{
+      font-size: 2.5rem;
+      word-break: keep-all;
+      overflow: hidden;
+    }
+    .gallery-title{
+      margin-top: 5%;
+      padding-left: 10px;
+      height: 50px;
+      font-size: 2.5rem;
+    }
+    #t{
+      font-size: 2rem;
+    }
+    .smallspan{
+      font-size: 2rem;
+    }
+    #t-n,#t-s,#t-m,#t-e{
+      font-size: 1.8rem;
+    }
+  }
+  @media (max-width:576px) {
+  
+    .gallery-title{
+      padding-left: 25px;
+      height: 50px;
+      font-size: 3rem;
+      margin-bottom: 0;
+      margin-top: 2.5%;
+      border-bottom: 1px dotted #effeee;
+    }
+    #t{
+      font-size: 2.4rem;
+    }
+    .smallspan{
+      font-size: 2.3rem;
+    }
+    #t-n,#t-s,#t-m,#t-e{
+      font-size: 2rem;
+    }
+  }
+  /*檔案圖片區*/
+  
+  .gallery_item {
+    
+    width: calc(90%/3);
+    height:250px;
+    padding: 0;
+    margin-bottom: 5%;
+    border: 2px solid #efffeeaa;
+  
+  }
+  @media (max-width:1200px) {
+    .gallery_item{
+      height: 200px;
+    }
+  }
+  @media (max-width:992px) {
+    .gallery_item{
+      height: 250px;
+    }
+  }
+
+  @media (max-width:576px) {
+    .gallery_item{
+      width:calc(90%/2);
+      height: 300px;
+ 
+    }
+    .gallery{
+      padding: 5%;
+      gap:0 9%;
+    }
+  }
+  @media (max-width:450px) {
+    .gallery_item{
+      height: 200px; 
+      min-width: 120px;
+    }
+  }
+  @media (max-width:330px) {
+    .gallery_item{
+      width:90%;
+      height: 300px;
+ 
+    }
+  }
+  
+  .gallery_item-link {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  
+  }
+  .gallery_item-link span {
+    margin-bottom: 10px;
+    color: #efffee;
+  }
+  
+  @media (max-width:992px) {
+    .gallery_item-link{
+      opacity: 1;
+      background-image: linear-gradient(to top, rgb(66, 32, 32), transparent);
+    }
+    .gallery_item-link span{
+      font-size: 1.2rem;
+    }
+  }
+
+  .gallery_item-link:hover {
+    opacity: 1;
+  }
+  
+  .gallery_item-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /*background-color: azure;*/
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.7;
+  
+  }
+  .gallery_item-img.tg1{
+    background-image: url("../img/taiwan/tg1.png");
+
+  }
+  .gallery_item-img.tg2{
+    background-image: url("../img/taiwan/tg2.png");
+  }
+  .gallery_item-img.tg3{
+    background-image: url("../img/taiwan/tg3.png");
+  }
+  .gallery_item-img.tg4{
+    background-image: url("../img/taiwan/tg4.png");
+  }
+  .gallery_item-img.tg5{
+    background-image: url("../img/taiwan/tg5.png");
+  }
+  .gallery_item-img.tg6{
+    background-image: url("../img/taiwan/tg6.png");
+  }
+  .gallery_item-img.jg1{
+    background-image: url("../img/japan/jg1.png");
+  }
+  .gallery_item-img.jg2{
+    background-image: url("../img/japan/jg2.png");
+  }
+  .gallery_item-img.jg3{
+    background-image: url("../img/japan/jg3.png");
+  }
+  .gallery_item-img.jg4{
+    background-image: url("../img/japan/jg4.png");
+  }
+  .gallery_item-img.jg5{
+    background-image: url("../img/japan/jg5.png");
+  }
+  .gallery_item-img.jg6{
+    background-image: url("../img/japan/jg6.png");
+  }
+  .gallery_item-img.jg7{
+    background-image: url("../img/japan/jg7.png");
+  }
+  .gallery_item-img.jg8{
+    background-image: url("../img/japan/jg8.png");
+  }
+  .gallery_item-img.jg9{
+    background-image: url("../img/japan/jg9.png");
+  }
+  .gallery_item-img.ag1{
+    background-image: url("../img/usa/ag1.png");
+  }
+  .gallery_item-img.ag2{
+    background-image: url("../img/usa/ag2.png");
+  }
+  .gallery_item-img.ag3{
+    background-image: url("../img/usa/ag3.png");
+  }
+  .gallery_item-img.ag4{
+    background-image: url("../img/usa/ag4.png");
+  }
+  .gallery_item-img.ag5{
+    background-image: url("../img/usa/ag5.png");
+  }
+  .gallery_item-img.ag6{
+    background-image: url("../img/usa/ag6.png");
+  }
+  .gallery_item-img.ag7{
+    background-image: url("../img/usa/ag7.png");
+  }
+  .gallery_item-img.ag8{
+    background-image: url("../img/usa/ag8.png");
+  }
+  .gallery_item-img.ag9{
+    background-image: url("../img/usa/ag9.png");
+  }
+
+  /*modal區*/
+  #modal-close1,#modal-close2,#modal-close3,#modal-close4,#modal-close5,#modal-close6, #modal-close7, #modal-close8, #modal-close9, #modal-close10 {
+    color: #aaa;
+    position: absolute;
+    font-size: 28px;
+    font-weight: bold;
+    top: 0;
+    right: 20px;
+  }
+  
+  #modal-close1:hover,
+  #modal-close1:focus ,
+  #modal-close2:hover,
+  #modal-close2:focus ,
+  #modal-close3:hover,
+  #modal-close3:focus ,
+  #modal-close4:hover,
+  #modal-close4:focus ,
+  #modal-close5:hover,
+  #modal-close5:focus ,
+  #modal-close6:hover,
+  #modal-close6:focus,
+  #modal-close7:hover,
+  #modal-close7:focus,
+  #modal-close8:hover,
+  #modal-close8:focus,
+  #modal-close9:hover,
+  #modal-close9:focus,
+  #modal-close10:hover,
+  #modal-close10:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #modal-background1, #modal-background2,#modal-background3,#modal-background4,#modal-background5,#modal-background6,
+  #modal-background7,#modal-background8,#modal-background9,#modal-background10{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: .50;
+    filter: alpha(opacity=50);
+    z-index: 1000;
+    overflow: auto;
+  }
+  .modal-content-img-t1{background-image: url(../img/taiwan/tg1.png);}
+  .modal-content-img-t2{background-image: url(../img/taiwan/tg2.png);}
+  .modal-content-img-t3{background-image: url(../img/taiwan/tg3.png);}
+  .modal-content-img-t4{background-image: url(../img/taiwan/tg4.png);}
+  .modal-content-img-t5{background-image: url(../img/taiwan/tg5.png);}
+  .modal-content-img-t6{background-image: url(../img/taiwan/tg6.png);}
+  .modal-content-img-j1{background-image: url(../img/japan/jg1.png);}
+  .modal-content-img-j2{background-image: url(../img/japan/jg2.png);}
+  .modal-content-img-j3{background-image: url(../img/japan/jg3.png);}
+  .modal-content-img-j4{background-image: url(../img/japan/jg4.png);}
+  .modal-content-img-j5{background-image: url(../img/japan/jg5.png);}
+  .modal-content-img-j6{background-image: url(../img/japan/jg6.png);}
+  .modal-content-img-j7{background-image: url(../img/japan/jg7.png);}
+  .modal-content-img-j8{background-image: url(../img/japan/jg8.png);}
+  .modal-content-img-j9{background-image: url(../img/japan/jg9.png);}
+  .modal-content-img-a1{background-image: url(../img/usa/ag1.png);}
+  .modal-content-img-a2{background-image: url(../img/usa/ag2.png);}
+  .modal-content-img-a3{background-image: url(../img/usa/ag3.png);}
+  .modal-content-img-a4{background-image: url(../img/usa/ag4.png);}
+  .modal-content-img-a5{background-image: url(../img/usa/ag5.png);}
+  .modal-content-img-a6{background-image: url(../img/usa/ag6.png);}
+  .modal-content-img-a7{background-image: url(../img/usa/ag7.png);}
+  .modal-content-img-a8{background-image: url(../img/usa/ag8.png);}
+  .modal-content-img-a9{background-image: url(../img/usa/ag9.png);}
+
+  #modal-content1,  #modal-content2,  #modal-content3,  #modal-content4,  #modal-content5,  #modal-content6,
+  #modal-content7,#modal-content8,#modal-content9,#modal-content10 {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 30px 0 rgb(0, 0, 0);
+    border: 1px dashed rgb(98, 0, 0);
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 80%;
+    overflow: auto;
+    z-index: 1000;
+    min-width: 700px;
+
+  }
+  
+  #modal-background1.active,
+  #modal-content1.active, 
+  #modal-background2.active,
+  #modal-content2.active,
+  #modal-background3.active,
+  #modal-content3.active,
+  #modal-background4.active,
+  #modal-content4.active,
+  #modal-background5.active,
+  #modal-content5.active,
+  #modal-background6.active,
+  #modal-content6.active,
+  #modal-background7.active,
+  #modal-content7.active,
+  #modal-background8.active,
+  #modal-content8.active,
+  #modal-background9.active,
+  #modal-content9.active,
+  #modal-background10.active,
+  #modal-content10.active{
+    display: block;
+  }
+  .modal-content-area{
+    width:100%;
+    height:100%;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /*modal放置圖片*/
+  .modal-content-img{
+    width:30%;
+    height: 80%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+   margin: 0 auto;
+   margin-right: 5%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+  }
+  .modal-content-text{
+    margin-top: 5%;
+    width:60%;
+    height:90%;
+  }
+
+ 
+  .modal-content-text h1{
+    color:#efffee;
+    font-family: "MingLiU";
+    font-size: 2.4rem;
+    letter-spacing: 6px;
+    }
+  .modal-content-text p{
+    margin-top: 5%;
+    padding-right: 8%;
+    font-family: "Noto Sans TC";
+    font-size: 1rem;
+    line-height: 2rem;
+    color:#efffee;
+    letter-spacing: 0.5px;
+    padding-left: 2%;
+    padding-bottom: 10%;
+
+  }
+
+  strong{
+    font-size: 1.2rem;
+    color:#c64747;
+  }
+  I{
+    color:#efffeec6;
+  }
+
+  @media (max-width:992px) {
+    #modal-content1,  #modal-content2,  #modal-content3,  #modal-content4,  #modal-content5,  #modal-content6,
+  #modal-content7,#modal-content8,#modal-content9,#modal-content10 {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 70%;
+    min-width: 600px;
+    padding: 2%;
+  }
+ 
+  .modal-content-text p{
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+  }
+  }
+
+  @media (max-width:768px) {
+      #modal-content1,  #modal-content2,  #modal-content3,  #modal-content4,  #modal-content5,  #modal-content6,
+  #modal-content7,#modal-content8,#modal-content9,#modal-content10 {
+
+    top:0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    padding-bottom: 5%;
+    z-index: 1000;
+    min-width: unset;
+    
+  }
+  .modal-content-area{
+    flex-direction: column;
+  }
+  .modal-content-img{
+    height: 550px;
+    width: 70%;
+    background-attachment: fixed;
+    background-size:cover;
+    margin: 0 auto;
+    background-position: unset;
+  }
+  #modal-close1,#modal-close2,#modal-close3,#modal-close4,#modal-close5,#modal-close6, #modal-close7, #modal-close8, #modal-close9, #modal-close10 {
+    color: #ff0000;
+  }
+
+  }
+  @media (max-width:576px) {
+    .modal-content-img{
+      width: 100%;
+      filter: brightness(0.8);
+      background-size:contain;
+    }
+    #modal-content1,  #modal-content2,  #modal-content3,  #modal-content4,  #modal-content5,  #modal-content6,
+  #modal-content7,#modal-content8,#modal-content9,#modal-content10{
+    padding: 0;
+  }
+  .modal-content-text{
+    width:85%;
+  }
+  .modal-content-text h1{
+   font-size: 3rem;
+  }
+  .modal-content-text p{
+    padding: 0;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-bottom: 75px;
+  }
+  strong{
+    font-size: 2rem;
+  }
+  }
+ 

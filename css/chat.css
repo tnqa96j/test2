@@ -1,0 +1,258 @@
+.article-form {
+    width: 100%;
+    height: 800px;
+    background-color: antiquewhite;
+    overflow-y: scroll;
+}
+.container{
+    margin-top: 0;
+}
+body {
+    height: 100vh;
+    text-align: center;
+    background-color: #000000;
+    color: #effeee;
+}
+.loading-wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -50px;
+    left: -50px;
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+    transform-origin: center;
+    background: rgb(0, 0, 0);
+    z-index: 9999;
+    overflow: hidden;
+  }
+  
+  .loading-wrapper img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+  }
+
+.top-bar {
+    height: 90px;
+    width: 100%;
+    background-color: #000000;
+    color: #effeee;
+    font-size: 2.5rem;
+    text-align: left;
+    font-family: "MingLiU";
+    letter-spacing: 7px;
+    word-break: break-all;
+    border-bottom: 1px dotted #effeee;
+    padding-top: 15px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+.thirdtitle {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 2px;
+    background:linear-gradient(#000000,#342636);
+}
+
+.tri {
+margin-left: 2px;
+}
+
+a {
+    color: #effeee;
+}
+
+/*Trigger Button*/
+.login-trigger {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(to bottom right, #242849, #904b77);
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 5%;
+    right: 2%;
+}
+.login-trigger:hover{
+    transform: scale(1.2);
+    transition: 0.5s all linear;
+}
+a:hover,
+a:visited {
+    text-decoration: none;
+    color: #eee;
+}
+
+.btn {
+    background-color: #000000;
+    border-color: #effeee;
+    color: #effeee;
+}
+
+.btn:hover {
+    background-color: #1b1111;
+    border-color: rgb(98, 23, 23);
+    color: rgb(207, 116, 116);
+}
+
+.btn:focus {
+    outline: 0;
+    background-color: rgb(158, 28, 28);
+    box-shadow: none;
+}
+
+.btn:active {
+    background-color: rgb(158, 28, 28);
+    box-shadow: none;
+}
+
+/*Modal*/
+h4 {
+    color: #fff;
+
+}
+
+.close {
+    color: #fff;
+
+}
+
+.close:checked {
+    border: 0;
+}
+
+.modal-content {
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #000000, #4c3c5d);
+}
+
+label {
+    color: #effeee;
+    text-align: left;
+    display: block;
+    margin-left: 2%;
+}
+
+.form-control {
+    margin: 1em 0;
+}
+
+.form-control:hover,
+.form-control:focus {
+    box-shadow: none;
+    border-color: #fff;
+}
+
+.username,
+.password {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 2px solid #eee;
+    padding-left: 0;
+    font-weight: normal;
+    background: transparent;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #fff;
+}
+
+.login {
+    padding: 6px 20px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid #FAB87F;
+    color: #FAB87F;
+    font-weight: bold;
+    transition: all .5s;
+    margin-top: 1em;
+}
+
+.login:hover {
+    background: #FAB87F;
+    color: #fff;
+}
+
+.article-col {
+    width: 100%;
+    height: 200vh;
+    background-color: #000000;
+    padding: 0;
+}
+
+.title-item {
+    background-color: rgb(51, 43, 56);
+    list-style: none;
+    color: #9a91ad;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 10px;
+    margin-top: 20px;
+    width: 80%;
+    border: 1.5px dotted #636a63;
+    font-size: 1.5rem;
+    font-family: 'Alegreya SC', serif, 'MingLiU';
+    letter-spacing: 3px;
+    border-radius: 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 30px;
+}
+.title-item:hover{
+    transition: 0.3s all linear;
+    background-color: rgb(103, 89, 105);
+    border-left: 10px solid #effeee;
+    
+}
+.title-item p{
+    font-size: 0.8rem;
+    text-align: right;
+    padding-right: 15px;
+    font-style: italic;
+    font-family: sans-serif;
+    color:#effeee9e;
+}
+.title-item h5{
+    color: #effeee;
+    margin-top: 5px;
+    letter-spacing: 1.5px;
+}
+@media (max-width:576px) {
+    .title-item{
+        width: 100%;
+    }
+}
+.innercontent{
+    height: 500px;
+}
+#articlecontent{
+    width:80%;
+    height: 30%;
+}
+.articlecomment{
+    width:80%;
+    height: 50%;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>都市傳說</title>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap" rel="stylesheet">
+
+    <!--bt-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--normalize-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/">
+
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--self-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+
+    <!--firebase-->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-storage-compat.js"></script>
+
+    <!--jq-->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--bt-->
+
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!--gsap-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <!--aos-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--self-->
+    <script src="js/move.js"></script>
+    <script src="js/data.js"></script>
+</head>
+
+<body>
+   <!--loading動畫-->
+   <div class="loading-wrapper">
+    <figure>
+      <img src="./gif/loading.gif">
+    </figure>
+  </div>
+  <div class="btn1">
+    <div class="btn-line"></div>
+    <div class="btn-line2"></div>
+    <div class="btn-line3"></div>
+  </div>
+  <div class="asidemenu">
+
+    <div class="nav-list">
+      <div class="menu">MENU</div>
+      <ul class="nav-list-area">
+        <li class="nav-list-area-item"><a href="index.html">&ensp;&ensp;HOME&ensp;‧&ensp;首頁</a></li>
+        <li class="nav-list-area-item aaa"><a>&ensp;&ensp;ARCHIVES&ensp;‧&ensp;檔案庫<span
+              class="rotatetri">&#9658;</span></a>
+        </li>
+        <ul class="archives-nav">
+          <li class="archives-nav-item"><a href="map_taiwan.html">臺灣</a></li>
+          <li class="archives-nav-item"><a href="map_japan.html">日本</a></li>
+          <li class="archives-nav-item"><a href="map_the_usa.html">美國</a></li>
+        </ul>
+        <li class="nav-list-area-item bbb"><a href="forum.html">&ensp;&ensp;FORUM&ensp;‧&ensp;論壇</a></li>
+        <li class="nav-list-area-item bbb"><a href="fortunate.html">&ensp;&ensp;DIVINATION&ensp;‧&ensp;占卜</a></li>
+      </ul>
+      <div class="btn-area">
+        <a href="#"><img src="./img/facebook.png" alt="" width="35px" height="35px"></a>
+        <a href="#"><img src="./img/twitter.png" alt="" width="35px" height="35px"></a>
+        <a href="#"><img src="./img/instagram.png" alt="" width="35px" height="35px"></a>
+        <a href="#"><img src="./img/discord.png" alt="" width="35px" height="35px"></a>
+
+      </div>
+    </div>
+  </div>
+    <div class="container">
+        <div class="top-bar col-xl-12"><a href="index.html">都市傳說</a><span class="subtitle">論壇區</span></div>
+        <div class="thirdtitle">文章列表<span class="tri">&or;</span></div>
+        <div class="row">
+            <div class="col-12">
+                <a class="login-trigger" href="##" data-target="#login" data-toggle="modal">+</a>
+                <div id="login" class="modal fade" role="dialog"> <!--modal-->
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body ">
+                                <button data-dismiss="modal" class="close">&times;</button>
+                                <h4>新增文章</h4>
+
+                                <form>
+                                    <div class="form-group">
+                                        <label for="title-field">標題</label>
+                                        <input type="text" class="form-control" id="title-field"
+                                            placeholder="請輸入標題······">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="content-field">內文</label>
+                                        <textarea class="form-control" id="content-field1" rows="3"
+                                            placeholder="請輸入內文······"></textarea>
+                                    </div>
+                                </form>
+                                <button type="submit" class="btn" id="submit" data-dismiss="modal">送出</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="article-col" id="article-col" href="#" data-target="#innercontent" data-toggle="modal"></ul>  <!--放title-->
+    </div>
+
+
+
+    </div>
+</body>
+
+</html>

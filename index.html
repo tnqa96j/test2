@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>都市傳說</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/
+    ">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-storage-compat.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="js/move.js"></script>
+  <script src="js/data.js"></script>
+
+</head>
+
+<body>
+  <!--loading動畫-->
+  <div class="loading-wrapper">
+    <figure>
+      <img src="./gif/loading.gif">
+    </figure>
+  </div>
+
+  <div class="wrapper">
+    <div class="banner"> <!--banner區-->
+      <img src="img/banner.png" alt="" class="banner-img">
+      <img src="gif/title.gif" class="banner-gif">
+    </div>
+    <!--主導覽區-->
+    <div class="btn-bar"></div>
+    <div class="btn1">
+      <div class="btn-line"></div>
+      <div class="btn-line2"></div>
+      <div class="btn-line3"></div>
+    </div>
+    <div class="asidemenu">
+
+      <div class="nav-list">
+        <div class="menu">MENU</div>
+        <ul class="nav-list-area">
+          <li class="nav-list-area-item"><a href="index.html">&ensp;&ensp;HOME&ensp;‧&ensp;首頁</a></li>
+          <li class="nav-list-area-item aaa"><a>&ensp;&ensp;ARCHIVES&ensp;‧&ensp;檔案庫<span
+                class="rotatetri">&#9658;</span></a>
+          </li>
+          <ul class="archives-nav">
+            <li class="archives-nav-item"><a href="map_taiwan.html">臺灣</a></li>
+            <li class="archives-nav-item"><a href="map_japan.html">日本</a></li>
+            <li class="archives-nav-item"><a href="map_the_usa.html">美國</a></li>
+          </ul>
+          <li class="nav-list-area-item bbb"><a href="forum.html">&ensp;&ensp;FORUM&ensp;‧&ensp;論壇</a></li>
+          <li class="nav-list-area-item bbb"><a href="fortunate.html">&ensp;&ensp;DIVINATION&ensp;‧&ensp;占卜</a></li>
+        </ul>
+        <div class="btn-area">
+          <a href="#"><img src="./img/facebook.png" alt="" width="35px" height="35px"></a>
+          <a href="#"><img src="./img/twitter.png" alt="" width="35px" height="35px"></a>
+          <a href="#"><img src="./img/instagram.png" alt="" width="35px" height="35px"></a>
+          <a href="#"><img src="./img/discord.png" alt="" width="35px" height="35px"></a>
+
+        </div>
+      </div>
+    </div>
+    <!--副導覽區-->
+    <div class="nav"> <!--外框的區域-->
+      <ul class="nav-bar"> <!--內框的區域-->
+        <!--回首頁的logo-->
+        <!--關於網站aboutus-->
+        <li class="nav-bar-item hh">
+          <img src="img/title.png" alt="">
+          <a href="#aboutus">都市傳說</a>
+        </li>
+        <li class="nav-bar-item">
+          <img src="gif/aboutus.gif" alt="">
+          <a href="#aboutus">關於</a>
+        </li>
+
+        <!--都傳分類sort-->
+        <li class="nav-bar-item">
+          <img src="gif/sort.gif" alt="">
+          <a href="#sort">分類</a>
+        </li>
+
+        <!--檔案庫入口discovery-->
+        <li class="nav-bar-item">
+          <img src="gif/archives.gif" alt="">
+          <a href="#discovery">檔案庫</a>
+        </li>
+        <li class="nav-bar-item border-right-none">
+          <img src="img/forum.png" alt="">
+          <a href="#discovery">論壇</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-2"> <!--外框的區域-->
+      <ul class="nav-bar"> <!--內框的區域-->
+        <!--回首頁的logo-->
+        <!--關於網站aboutus-->
+        <li class="nav-bar-item">
+          <a href="#aboutus">都市傳說</a>
+        </li>
+        <li class="nav-bar-item">
+          <a href="#aboutus">關於網站</a>
+        </li>
+
+        <!--都傳分類sort-->
+        <li class="nav-bar-item">
+          <a href="#sort">分類</a>
+        </li>
+
+        <!--檔案庫入口discovery-->
+        <li class="nav-bar-item">
+          <a href="#discovery">檔案庫區</a>
+        </li>
+        <li class="nav-bar-item border-right-none">
+          <a href="#discovery">論壇入口</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container"> <!--網站介紹區1-->
+      <div class="row" data-aos="fade-down">
+        <div class="col-lg-6">
+          <img src="img/first.png" alt="" class="intro-img">
+        </div>
+        <div class="col-lg-6">
+          <div class="intro-text">
+            <div class="row"> <!--Welcome to-->
+              <div class="col-md-12">
+                <div class="welcometotitle">
+                  <h1 class="text-magic" data-word="Welcome To">Welcome To</h1>
+                  <div class="white"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row"> <!--「都市傳說檔案庫」-->
+              <div class="col-md-12">
+                <div class="welcometotitlechinese">「都市傳說檔案庫」</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12"> <!--介紹文字-->
+                <div class="intro-textfield">
+                  &ensp;&ensp;&ensp;&ensp; 都市傳說(urban
+                  tale)，是一種主要以生活為背景，由敘述者煞有其事地講述，以新奇、怪誕或嚇人情節為主要特色的短篇幅民間故事、傳說或傳奇。相比傳統的怪異故事，都市傳說更貼近現代城市生活，不限於鬼怪題材，可由不尋常的小事改編，僅以人與人之間自發流傳的形式傳播，反映人們對現代社會中的交通、通訊、技術等各方面的憂慮或與之相關的怪念頭和遐想，是生活於現代化城鎮的居民追求新奇的消遣品。
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="container"> <!--網站介紹區2-->
+      <div class="row" data-aos="fade-down">
+        <div class="col-lg-6">
+          <div class="intro-text">
+            <div class="row">
+              <div class="col-sm-12 aboutustext">
+                <div class="intro-textfield">&ensp;&ensp;&ensp;&ensp;在這裡，我們蒐集了各類都市傳說，並按照不同地區進行的劃分。
+                  喜歡恐怖故事、追求怪誕事件的你，可以使用我們的網站，通過簡單明瞭的界面以及操作，探索這個地圖，了解這裡流傳過的都市傳說故事。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/second.png" alt="" class="intro-img">
+        </div>
+      </div>
+    </div>
+    <div class="container"><!--關於網站 標題-->
+      <div class="blood" data-aos="fade-down">
+        <div class="row">
+          <div class="col-md-12 intro-text justify-content" data-aos="fade-down"> <!--intro-text for 字的大小-->
+            <!--justify-content for字的置中-->
+            <img src="gif/aboutus.gif" alt="" class="aboutus-img">
+            <span class="aboutustitle">關於網站</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 justify-content intro-text" data-aos="fade-down">
+            <span class="intro-text-small">以上是我們為您提供的服務。在使用這些服務前，請您遵循以下規則:</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 intro-text">
+            <div class="gg">
+              <div class="warn-group">
+                <img src="gif/aboutus.gif" alt="">
+                <img src="gif/aboutus.gif" alt="">
+                <img src="gif/aboutus.gif" alt="">
+              </div>
+            </div>
+
+            <div class="warn" data-aos="fade-down">
+              <div class="col-12 warning"><img src="gif/aboutus.gif" alt="" class="warning-img"> 不可在26時進入網站，否則將會被詛咒。
+              </div>
+              <div class="col-12 warning"><img src="gif/aboutus.gif" alt="" class="warning-img"> 若身體不適，請立即離開網站並調適呼吸。
+              </div>
+              <div class="col-12 warning"><img src="gif/aboutus.gif" alt="" class="warning-img"> 如果發現周圍環境發生變化，請立即離開網站。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container"><!--分類-->
+      <div class="row">
+        <div class="col-md-12 intro-text justify-content" data-aos="fade-down">
+          <div class="aboutustitle  margin-for-introduction">分類</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 intro-text justify-content" data-aos="fade-down">
+          <div class="intro-text-small">以下是都市傳說主要的幾大分類：</div>
+        </div>
+      </div>
+
+      <div class="row"> <!--Collapse or Accordion-->
+        <div class="col-md-12">
+          <div class="circle-group " data-aos="fade-down"><!--for css:grid-->
+            <div class="square rounded-circle item1-1">普通現代生活類</div>
+            <!--square作用:宣告方塊擺標題 圓圈ok item的目的是red時的位置變動(不要動) square2的目的是改變flex-direction順序(不要動)-->
+            <div class="square square5-2 item5-2">
+              <div class="box5-2">
+                <p>&ensp;如常見於水泥結構房屋的「樓上彈珠聲」。不過並非所有奇怪的生活經驗都屬於都市傳說。</p>
+              </div>
+            </div> <!--box的作用是對話框的角度-->
+            <div class="square rounded-circle item2-1">靈異類</div>
+            <div class="square square6-2 item6-2">
+              <div class="box6-2">
+                <p>&ensp;電子遊戲中鮮為人知或觸發條件不明的遊戲彩蛋，有些則是偶然發生且不易重現的程序bug。</p>
+              </div>
+            </div>
+            <div class="square rounded-circle item3-1">案例事件類</div>
+            <div class="square square7-2 item7-2">
+              <div class="box7-2">
+                <p>&ensp;以「瘦長人」的故事常被誤列入都市傳說，但這個故事是完全由網民集體虛構的，故屬於偽造傳說。</p>
+              </div>
+            </div>
+            <div class="square rounded-circle item4-1">現代工具或技術類</div>
+            <div class="square square1-2 item1-2">
+              <div class="box1-2">
+                <p>&ensp;如《商店毛毯中的蛇/毯中蛇》和各式「因不吉利或沾過死人血而以超低價出售的貨物」一類的故事。</p>
+              </div>
+            </div>
+            <div class="square rounded-circle item5-1">真實生活</div>
+            <div class="square square2-2 item2-2">
+              <div class="box2-2">
+                <p>&ensp;可劃入在大膽的想像。例如：廁所裡的花子、裂嘴女、人魚。</p>
+              </div>
+            </div>
+            <div class="square rounded-circle item6-1">虛擬世界類</div>
+            <div class="square square3-2 item3-2">
+              <div class="box3-2">
+                <p>以全世界歷史或生活中發生的一些難以理解的事件或者詭異案例為中心，美國影集X檔案的一些劇情原型便是典型例子。</p>
+              </div>
+            </div>
+            <div class="square rounded-circle item7-1">歸類謬誤、<br>爭議類故事</p>
+            </div>
+            <div class="square square4-2 item4-2">
+              <div class="box4-2">
+                <p>&ensp;與現代交通工具或技術發明為主要元素，可與靈異類故事有重合，如《消失中的便車旅行者/搭便車的人》。</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container"><!--檔案庫入口-->
+      <div class="row">
+        <div class="col-12 intro-text justify-content" data-aos="fade-down">
+          <div class="aboutustitle margin-for-introduction">檔案庫入口</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 intro-text justify-content" data-aos="fade-down">
+          <div class="intro-text-small">進入都市傳說檔案庫，和我們一同探索世界各地詭異而神秘的都市傳說。</div>
+        </div>
+      </div>
+      <div class="row" id="tvzoomin">
+        <div class="col-12 justify-content">
+          <div class="archives-area">
+
+            <div id="archives-entry"><!--檔案庫區域--> <!--2-->
+              <img src="img/tv_PNG39266.png" alt="" id="tv"> <!--電視框-->
+              <div id="archives"> <!--包覆gif的div--> <!--3-->
+                <img src="gif/archives-entry.gif" alt="">
+              </div>
+              <a href="/" id="entry-btn">進入<div class="triangle"></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container"><!--論壇入口-->
+      <div class="row">
+        <div class="col-12 intro-text justify-content" data-aos="fade-down">
+          <div class="aboutustitle  margin-for-introduction">論壇入口</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 intro-text justify-content" data-aos="fade-down">
+          <div class="intro-text-small">進入匿名論壇，分享生活周遭的異聞奇事。</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="forum-area" id="phonerotate">
+            <div id="smartphone1">
+              <img src="img/smartphone.png" id="smartphone1img">
+              <div class="screen">
+                <div class="comment">
+                  <img src="img/profile.png" class="profile">
+                  <div class="block">
+                    <div class="block-inner-long"></div>
+                    <div class="block-inner-short"></div>
+                  </div>
+                </div>
+                <div class="comment2">
+                  <img src="img/profile.png" class="profile">
+                  <div class="block">
+                    <div class="block-inner-long"></div>
+                    <div class="block-inner-short"></div>
+                  </div>
+                </div>
+                <div class="comment3">
+                  <img src="img/profile.png" class="profile">
+                  <div class="block">
+                    <div class="block-inner-long"></div>
+                    <div class="block-inner-short"></div>
+                  </div>
+                </div>
+                <div class="comment4">
+                  <img src="img/profile.png" class="profile">
+                  <div class="block">
+                    <div class="block-inner-long"></div>
+                    <div class="block-inner-short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/" id="forum-btn">進入<div class="triangle-forum"></div></a>
+            <div id="smartphone2">
+              <img src="img/smartphone.png" id="smartphone2img">
+              <div class="screen">
+                <div class="comment">
+                  <img src="img/profile.png" class="profile">
+                  <div class="block">
+                    <div class="block-inner-long"></div>
+                    <div class="block-inner-short"></div>
+                  </div>
+                </div>
+                <div class="comment2">
+                  <img src="img/profile.png" class="profile">
+                  <div class="block">
+                    <div class="block-inner-long"></div>
+                    <div class="block-inner-short"></div>
+                  </div>
+                </div>
+                <div class="comment3">
+                  <img src="img/profile.png" class="profile">
+                  <div class="block">
+                    <div class="block-inner-long"></div>
+                    <div class="block-inner-short"></div>
+                  </div>
+                </div>
+                <div class="comment4">
+                  <img src="img/profile.png" class="profile">
+                  <div class="block">
+                    <div class="block-inner-long"></div>
+                    <div class="block-inner-short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container"> <!--占卜入口-->
+      <div class="row " id="windowcomeout">
+        <div class="col-12">
+          <div class="blockpopup">
+            <div class="popup1">
+              <div class="popupbar">
+                <div class="popicon">
+                  <div class="popicon-right">&#xd7;</div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-mid"></div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-left"></div>
+                </div>
+              </div>
+            </div>
+            <div class="popup2">
+              <div class="popupbar">
+                <div class="popicon">
+                  <div class="popicon-right">&#xd7;</div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-mid"></div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-left"></div>
+                </div>
+              </div>
+            </div>
+            <div class="popup3">
+              <div class="popupbar">
+                <div class="popicon">
+                  <div class="popicon-right">&#xd7;</div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-mid"></div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-left"></div>
+                </div>
+              </div>
+            </div>
+            <div class="popup4">
+              <div class="popupbar">
+                <div class="popicon">
+                  <div class="popicon-right">&#xd7;</div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-mid"></div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-left"></div>
+                </div>
+              </div>
+            </div>
+            <div class="popup5">
+              <div class="popupbar">
+                <div class="popicon">
+                  <div class="popicon-right">&#xd7;</div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-mid"></div>
+                </div>
+                <div class="popicon">
+                  <div class="popicon-left"></div>
+                </div>
+              </div>
+
+              <div class="popupcontent">
+                <div class="intro-text justify-content gray margin-for-introduction"> <!--intro-text for 字的大小-->
+                  <!--justify-content for字的置中-->
+                  <img src="gif/aboutus.gif" alt="" class="fortunate-img">
+                  <span class="aboutustitle ">占卜</span>
+                </div>
+                <div class="intro-text-small justify-content">對自己的運氣有信心嗎？來測試看看吧！</div>
+                <div href="" class="fortunate-btn">測試<div class="triangle-forum"></div></div>
+              </div>
+              <div class="box1"></div>
+              <div class="box2"></div>
+              <div class="box3"></div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <footer> <!--footer-->
+      <div class="footer1">
+        <img src="img/titlenomove.png" class="footer1img">
+      </div>
+
+      <div class="footer2">
+        <h1>首頁</h1>
+        <a href="index.html#aboutus">關於我們</a>
+        <a href="index.html#sort">論壇</a>
+        <a href="index.html#sort">占卜</a>
+      </div>
+
+      <div class="footer3">
+        <h1>檔案庫</h1>
+        <a href="map_taiwan.html">台灣</a>
+        <a href="map_japan.html">日本</a>
+        <a href="map_the_usa.html">美國</a>
+      </div>
+
+      <div class="footer4">
+        <h1>聯絡我們</h1>
+        <div class="footer-btn-group">
+          <img src="img/facebook.png">
+          <img src="img/twitter.png">
+          <img src="img/instagram.png">
+          <img src="img/discord.png">
+        </div>
+        <p>EMAIL: Urban_Legend@gmail.com</p>
+      </div>
+
+    </footer>
+  </div>
+
+
+
+
+</body>
+
+</html>
